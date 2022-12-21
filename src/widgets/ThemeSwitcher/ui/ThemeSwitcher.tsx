@@ -1,4 +1,3 @@
-import cls from "./ThemeSwitcher.module.scss";
 import { ETheme, useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import LightIcon from "shared/assets/icons/theme-light.svg";
@@ -16,7 +15,7 @@ export function ThemeSwitcher(props: ThemeSwitcherProps) {
   return (
     <Button
       theme={EThemeButton.CLEAR}
-      className={classNames(cls.themeSwitcher, {}, [props.className] )}
+      className={classNames("", {}, [props.className] )}
       onClick={toggleTheme}
     > {
         theme === ETheme.DARK ? <DarkIcon /> : <LightIcon />
