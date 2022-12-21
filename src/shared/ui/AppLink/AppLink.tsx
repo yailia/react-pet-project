@@ -25,4 +25,4 @@ export function AppLink({theme = AppLinkTheme.PRIMARY, ...props}: AppLinkProps) 
       {props.children}
     </Link>
   );
-};
+}

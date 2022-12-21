@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import cls from "./NavBar.module.scss"
+import cls from "./NavBar.module.scss";
 
 interface NavBarProps {
   className?: string;
@@ -13,7 +13,7 @@ export function NavBar(props: NavBarProps) {
         <AppLink 
           to={"/"}
           theme={AppLinkTheme.SECONDARY}
-          >
+        >
           MainPage
         </AppLink>
         <AppLink 

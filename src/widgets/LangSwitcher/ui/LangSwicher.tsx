@@ -22,4 +22,4 @@ export function LangSwicher(props: LangSwicherProps) {
       {t("Перевод")}
     </Button>
   );
-};
+}

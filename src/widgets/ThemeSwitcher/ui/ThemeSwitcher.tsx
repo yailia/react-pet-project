@@ -9,18 +9,18 @@ import { Button } from "shared/ui";
 
 interface ThemeSwitcherProps {
   className?: string;
-};
+}
 
 export function ThemeSwitcher(props: ThemeSwitcherProps) {
-  const {theme, toggleTheme} = useTheme()
+  const {theme, toggleTheme} = useTheme();
   return (
     <Button
       theme={EThemeButton.CLEAR}
       className={classNames(cls.themeSwitcher, {}, [props.className] )}
       onClick={toggleTheme}
     > {
-      theme === ETheme.DARK ? <DarkIcon /> : <LightIcon />
-    }
+        theme === ETheme.DARK ? <DarkIcon /> : <LightIcon />
+      }
     </Button>
 
   );

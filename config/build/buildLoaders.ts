@@ -8,7 +8,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
       {
-        loader: 'file-loader',
+        loader: "file-loader",
       },
     ],
   };
@@ -16,7 +16,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
-    use: [{ loader: '@svgr/webpack', options: { icon: true } }],
+    use: [{ loader: "@svgr/webpack", options: { icon: true } }],
   };
 
   const babelLoader = {
@@ -25,7 +25,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     use: {
       loader: "babel-loader",
       options: {
-        presets: ['@babel/preset-env'],
+        presets: ["@babel/preset-env"],
         "plugins": [
           ["i18next-extract", {
             loacales: ["ru", "en"],
@@ -38,7 +38,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
   const typescriptLoader = {
     test: /\.tsx?$/,
-    use: 'ts-loader',
+    use: "ts-loader",
     exclude: /node_modules/,
   };
 
@@ -66,5 +66,5 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     babelLoader,
     typescriptLoader,
     cssLoaders,
-  ]
+  ];
 }

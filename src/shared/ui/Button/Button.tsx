@@ -22,4 +22,4 @@ export function Button({className, children, ...props}: ButtonProps) {
       {children}
     </button>
   );
-};
+}
